@@ -1,0 +1,36 @@
+client:
+  name: basic
+tools: {}
+targets:
+  "PackageStructure": ["<PackageStructure>"]
+  "SwiftyJSON-debug.module": ["<SwiftyJSON-debug.module>"]
+default: "main"
+commands:
+  "<SwiftyJSON-debug.module>":
+    tool: phony
+    inputs: ["/Users/heldiam/Developer/Swift/manage/manage/.build/x86_64-apple-macosx/debug/SwiftyJSON.build/SwiftyJSON.swift.o","/Users/heldiam/Developer/Swift/manage/manage/.build/x86_64-apple-macosx/debug/SwiftyJSON.swiftmodule"]
+    outputs: ["<SwiftyJSON-debug.module>"]
+
+  "C.SwiftyJSON-debug.module":
+    tool: swift-compiler
+    inputs: ["/Users/heldiam/Developer/Swift/manage/manage/.build/checkouts/SwiftyJSON/Source/SwiftyJSON/SwiftyJSON.swift"]
+    outputs: ["/Users/heldiam/Developer/Swift/manage/manage/.build/x86_64-apple-macosx/debug/SwiftyJSON.build/SwiftyJSON.swift.o","/Users/heldiam/Developer/Swift/manage/manage/.build/x86_64-apple-macosx/debug/SwiftyJSON.swiftmodule"]
+    executable: "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc"
+    module-name: "SwiftyJSON"
+    module-output-path: "/Users/heldiam/Developer/Swift/manage/manage/.build/x86_64-apple-macosx/debug/SwiftyJSON.swiftmodule"
+    import-paths: ["/Users/heldiam/Developer/Swift/manage/manage/.build/x86_64-apple-macosx/debug"]
+    temps-path: "/Users/heldiam/Developer/Swift/manage/manage/.build/x86_64-apple-macosx/debug/SwiftyJSON.build"
+    objects: ["/Users/heldiam/Developer/Swift/manage/manage/.build/x86_64-apple-macosx/debug/SwiftyJSON.build/SwiftyJSON.swift.o"]
+    other-args: ["-target","x86_64-apple-macosx10.10","-swift-version","5","-enable-batch-mode","-index-store-path","/Users/heldiam/Developer/Swift/manage/manage/.build/x86_64-apple-macosx/debug/index/store","-sdk","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.15.sdk","-F","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks","-I","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-L","/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib","-Onone","-enable-testing","-g","-j8","-DSWIFT_PACKAGE","-DDEBUG","-module-cache-path","/Users/heldiam/Developer/Swift/manage/manage/.build/x86_64-apple-macosx/debug/ModuleCache","-parseable-output","-emit-objc-header","-emit-objc-header-path","/Users/heldiam/Developer/Swift/manage/manage/.build/x86_64-apple-macosx/debug/SwiftyJSON.build/SwiftyJSON-Swift.h","-color-diagnostics"]
+    sources: ["/Users/heldiam/Developer/Swift/manage/manage/.build/checkouts/SwiftyJSON/Source/SwiftyJSON/SwiftyJSON.swift"]
+    is-library: true
+    enable-whole-module-optimization: false
+    num-threads: 8
+
+  "PackageStructure":
+    tool: package-structure-tool
+    inputs: ["/Users/heldiam/Developer/Swift/manage/manage/Package.swift","/Users/heldiam/Developer/Swift/manage/manage/Package.resolved"]
+    outputs: ["<PackageStructure>"]
+    description: "Planning build"
+    allow-missing-inputs: true
+

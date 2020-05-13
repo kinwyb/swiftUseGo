@@ -1,0 +1,20 @@
+{
+  "allExecutables" : [
+
+  ],
+  "builtTestProducts" : [
+
+  ],
+  "copyCommands" : {
+
+  },
+  "rootExecutables" : [
+
+  ],
+  "swiftTargetMap" : {
+    "C.SwiftyJSON-debug.module" : "SwiftyJSON"
+  },
+  "testDiscoveryCommands" : {
+
+  }
+}

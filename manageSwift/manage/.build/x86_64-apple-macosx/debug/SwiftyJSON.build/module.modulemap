@@ -1,0 +1,4 @@
+module SwiftyJSON {
+    header "/Users/heldiam/Developer/Swift/manage/manage/.build/x86_64-apple-macosx/debug/SwiftyJSON.build/SwiftyJSON-Swift.h"
+    requires objc
+}
